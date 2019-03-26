@@ -4,7 +4,7 @@ const router = express.Router();
 const User = require('../models/user');
 
 const mongoose = require('mongoose')
-const db = "mongodb://techno:<techno123>@ds125486.mlab.com:25486/technoliege-task"
+const db = "mongodb://techno:techno123@ds125486.mlab.com:25486/technoliege-task"
 
 mongoose.connect(db, err => {
     if (err) {
