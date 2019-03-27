@@ -1,3 +1,24 @@
-<p>
-  login works!
-</p>
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+<div class="container">
+    <form>
+    <div class="row colored">
+        <div id="contentdiv" class="contcustom">
+            <span class="fa fa-spinner bigicon"></span>
+            <h2>Login</h2>
+            <div>
+                <input [(ngModel)]="loginUserData.userName" name="userName" id="userName" type="text" placeholder="userName">
+                <input [(ngModel)]="loginUserData.password" name="password" id="password" type="password" placeholder="password">
+                <button type="submit" class="button-login" (click)="loginUser()">Login</button>
+
+            </div>
+            <div>
+                <br>
+                <p>
+                    <a class="btn btn-link" class="text-muted">Forget Password ?</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</form>
+</div>

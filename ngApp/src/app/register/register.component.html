@@ -1,3 +1,26 @@
-<p>
-  register works!
-</p>
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+<div class="container">
+    <form>
+    <div class="row colored">
+        <div id="contentdiv" class="contcustom">
+            <span class="fa fa-spinner bigicon"></span>
+            <h2>SignUp</h2>
+            <div>
+                <input [(ngModel)]="registerUserData.firstName" name="firstName" id="firstName" type="text" placeholder="FirstName">
+                <input [(ngModel)]="registerUserData.lastName" name="lastName" id="lastName" type="text" placeholder="LastName">
+                <input [(ngModel)]="registerUserData.email" name="email" id="email" type="email" placeholder="Email">
+                <input [(ngModel)]="registerUserData.job" name="job" id="job" type="text" placeholder="Job Title">
+                <input [(ngModel)]="registerUserData.adress" name="adress" id="adress" type="text" placeholder="Adress">
+                <input [(ngModel)]="registerUserData.url" name="url" id="url" type="text" placeholder="URL">
+                <input [(ngModel)]="registerUserData.userName" name="userName" id="username" type="text" placeholder="UserName">
+                <input [(ngModel)]="registerUserData.password" name="password" id="password" type="password" placeholder="Password">
+                <button type="submit" class="button-signup" (click)="register()">Submit</button>
+
+            </div>
+            <div>
+            </div>
+        </div>
+    </div>
+</form>
+</div>
