@@ -1,6 +1,6 @@
-<h1> News</h1>
-
-<ul class="list-group">
+<!-- <h1> News</h1> -->
+<div class="img"><img src="../img/news.jpg"  alt="yazewsdxcz"></div>
+<!-- <ul class="list-group">
   <li class="list-item" *ngFor="let post of posts$[0].articles">
     <div>
       <h2>{{post.author}}</h2>
@@ -9,4 +9,19 @@
       <p>{{post.description}}</p>
    </div>
  </li>
-</ul>
+</ul> -->
+
+
+<div class="blog-card" *ngFor="let post of posts$[0].articles">
+    <div class="meta">
+      <div class="photo" style="background-image: url(https://www.albertadoctors.org/images/ama-master/feature/News.jpg)"></div>
+    </div>
+    <div class="description">
+      <h1>{{post.author}}</h1>
+      <h2>{{post.title}}</h2>
+      <p>{{post.content}}</p>
+      <p>{{post.description}}</p>
+    </div>
+  </div>
+  
+  
