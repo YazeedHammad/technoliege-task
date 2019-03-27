@@ -1,3 +1,24 @@
-<p>
-  nav works!
-</p>
+<nav>
+  <ul>
+      <li>
+          <a routerLink="" routerLinkActive="active-list-item" [routerLinkActiveOptions]="{exact:true}">
+            <i class="material-icons">home</i>
+          </a>
+        </li>
+    <li>
+      <a routerLink="profile" routerLinkActive="active-list-item" [routerLinkActiveOptions]="{exact:true}">
+        <i class="material-icons">account_circle</i>
+      </a>
+    </li>
+    <li>
+        <a routerLink="news" routerLinkActive="active-list-item" [routerLinkActiveOptions]="{exact:true}">
+          <i class="material-icons">message</i>
+        </a>
+      </li>
+      <li>
+        <a routerLinkActive="active-list-item" [routerLinkActiveOptions]="{exact:true}">
+          <i class="material-icons" *ngIf= "_authService.loggedIn()" (click)="_authService.loggedOut()">highlight_off</i>
+        </a>
+      </li>
+  </ul>
+</nav>
