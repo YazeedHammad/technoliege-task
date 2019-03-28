@@ -6,6 +6,7 @@ const User = require('../models/user');
 const mongoose = require('mongoose')
 const db = "mongodb://techno:techno123@ds125486.mlab.com:25486/technoliege-task"
 
+//connect to DB
 mongoose.connect(db, err => {
     if (err) {
         console.error('Error!' + err)
@@ -18,6 +19,8 @@ router.get('/', (req, res) => {
     res.send('From API Route')
 })
 
+
+//register new user in DB
 router.post('/register', (req, res) => {
     let userData = req.body;
     let user = new User(userData);
@@ -31,6 +34,7 @@ router.post('/register', (req, res) => {
         }
     })
 
+//check if the user exist in DB 
 router.post('/login', (req, res) => {
     let userData = req.body;
     User.findOne({userName: userData.userName}, (error, user) => {

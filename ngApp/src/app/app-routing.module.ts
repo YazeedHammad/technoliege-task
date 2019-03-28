@@ -11,6 +11,8 @@ const routes: Routes = [
     path: '',
     component: HomeComponent
   },
+
+  //canActive for check if the user logged in so he can open profile page
   {
     path: 'profile',
     component: ProfileComponent,

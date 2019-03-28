@@ -11,4 +11,6 @@ const userSchema = new Schema({
     userName: String,
     password: String
 })
+
+//export the module, the first parmeter is the module name, the sec is schema name, the last one is collection name in MLab
 module.exports = mongoose.model('user', userSchema, 'users')

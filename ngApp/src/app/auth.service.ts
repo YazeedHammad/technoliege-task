@@ -13,6 +13,7 @@ export class AuthService {
               private _router: Router) { }
 
   
+  //sending userdata to server using url of server and user info
   registerUser(user) {
     return this.http.post<any>(this._registerUrl, user);
   }

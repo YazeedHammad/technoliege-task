@@ -19,6 +19,7 @@ export class LoginComponent implements OnInit {
   loginUser() {
     this._auth.loginUser(this.loginUserData)
     .subscribe(
+      //save the user token in the browser using localstorage
       res => {
         console.log(res)
         localStorage.setItem('token', res.token)

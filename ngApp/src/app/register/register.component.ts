@@ -17,9 +17,12 @@ export class RegisterComponent implements OnInit {
   ngOnInit() {
   }
 
+
+  //call the auth service to send data through it to DB
   register() {
     this._auth.registerUser(this.registerUserData)
     .subscribe(
+      //save the token in the browser using localStorage
       res => {
         console.log(res)
         localStorage.setItem('token', res.token)
